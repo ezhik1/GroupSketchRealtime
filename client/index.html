@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Group Sketch</title>
+	
+<!-- local stylesheets -->
+	<link rel="stylesheet" type='text/css' href="/angular/partials/1.css"/>
+	<link rel="stylesheet" type='text/css' href="/angular/partials/2.css"/>
+	
+<!-- angular -->
+	
+	<script src='../angular.js'/></script>
+	<script src='../angular-route.js'/></script>
+
+<!-- Local angular dependencies -->
+	<script src= '/angular/app.js'></script>
+
+	<script src = "/angular/factories/NameFactory.js"></script>
+	<script src = "/angular/controllers/NameController.js"></script>
+<!-- socket.io source -->
+
+	<script src="/socket.io/socket.io.js"></script>
+
+<!-- canvas local script -->
+	
+	
+</head>
+<body>
+	<div id="wrapper">
+		<div ng-app='myApp'>
+			<div ng-view=""></div>
+		</div>
+	</div>
+
+</body>
+
+	<script>
+
+		
+
+		myApp.config(function ($routeProvider, $locationProvider) {
+		  $routeProvider
+		    .when('/',
+		      {
+		        templateUrl: 'angular/partials/view1.html'
+		      })
+		    .when('/sketch',
+		      {
+		        templateUrl: 'angular/partials/view2.html'
+		      })
+		    .otherwise({
+		      redirectTo: '/'
+			});
+		}).run(function($rootScope,$location){
+			$rootScope.$on( "$routeChangeStart", function(event, next, current){
+				if(localStorage.getItem('user') == null){
+
+					if(next.templateUrl ==="angular/partials/view1.html"){
+						
+					}
+					else{
+						$location.path("/login")
+					}
+				}
+			})
+		});
+	</script>
+</html>

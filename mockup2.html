@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Group Sketch</title>
+
+	<style>
+		*{
+			font-family: helvetica;
+		}
+		#wrapper{
+			margin: 0 auto;
+			width: 900px;
+			
+		}
+		#topbar{
+			margin-top: 40px;
+			display: block;
+			width:100%;
+		}
+
+		#topbar h3, #topbar p{
+			display: inline-block;
+			min-width: 250px;
+			width: 450px;
+			margin-left:-4px;
+		}
+		#topbar p{
+		 	text-align: right;
+		 }
+
+	
+		#midbar{
+			min-width: 250px;
+		}
+
+		.col{
+			display: inline-block;
+			min-width: 250px;
+			width: 800px;
+		}
+		#brush p{
+			background-color: black;
+			border-radius: 50%;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 20px;
+		}
+		#brush p:hover{
+			border:3px solid #FF1A1A;
+			border-radius: 50%;
+
+		}
+		#brush h5{
+			display: inline-block;
+		}
+		#b1{
+			width: 5px;
+			height: 5px;
+		}
+		#b2{
+			width: 10px;
+			height: 10px;
+		}
+		#b3{
+			width: 15px;
+			height: 15px;
+		}
+		#color p{
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 20px;
+			width: 20px;
+			height: 20px;
+			border-radius: 3px;
+		}
+		#g{
+			background-color: green;
+		}
+		#b{
+			background-color: blue;
+		}
+		#r{
+			background-color: red;
+		}
+		#blk{
+			background-color: black;
+		}
+
+		#color h5{
+			display: inline-block;
+		}
+		#b1{
+			width: 5px;
+			height: 5px;
+		}
+		#b2{
+			width: 10px;
+			height: 10px;
+		}
+		#b3{
+			width: 15px;
+			height: 15px;
+		}
+		#eraser{
+			height: 59px;
+			width: 50px;
+		}
+		#eraser a{
+			text-decoration: none;
+			background-color: #75BFA9;
+			color: white;
+			line-height: 59px;
+
+			padding: 10px  5px  10px 5px;
+			width: 50px;
+			border-radius: 5px;
+			box-shadow: 5px 2px 10px 1px #B5B5B5;
+	
+		}
+		#brush, #eraser, #color{
+			display: inline-block;
+			width: 250px;
+		}
+		#col2 {
+			display: inline-block;
+			float: right;
+		}
+		#col2 a{
+			text-decoration: none;
+			color: #5F5F5F;
+		}
+		#col2 a:hover{
+			color: #419ABC;
+		}
+		#canvas{
+			margin-top: 30px;
+			width: 100%;
+			height: 700px;
+			border: 1px solid #484848;
+			display: block;
+			border-radius: 3px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="topbar">
+			<h3>Main Idea</h3>
+			<p>Invite others to join the room here: groupstretch.com/rooms/153555</p>
+		</div>
+		<div id="midbar">
+			<div class="col">
+				<div id= "brush">
+					<h5>size: </h5>
+					<p id='b1'></p>
+					<p id='b2'></p>
+					<p id='b3'></p>
+				</div>
+				<div id="color">
+					<h5>color: </h5>
+					<p id="g"></p>
+					<p id="b"></p>
+					<p id="blk"></p>
+					<p id="r"></p>
+				</div>
+				<div id="eraser">
+					<a href="#">eraser</a>
+				</div>
+			</div>
+			<div id="col2">
+				<a href="#">Email</a>
+				<a href="#">Download</a>
+				<a href="#">New</a>
+			</div>
+		</div>
+		<div id="canvas"></div>
+		
+
+	</div>
+	
+</body>
+</html>

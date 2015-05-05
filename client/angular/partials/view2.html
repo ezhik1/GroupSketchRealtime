@@ -1,0 +1,47 @@
+<div ng-controller = 'NameController'>
+	<div id="topbar" >
+		<h3>Welcome to the WhiteBoard, {{loggedInUser}}</h3>
+		<button ng-click="logout()">Logout</button>
+	</div>
+	<div id="mainbar">
+		<div id="midbar">
+			<div class="col">
+				<div id= "brush">
+					<h5>size: </h5>
+					<p id='b1' ng-click="change.lineWidth(3)"></p>
+					<p id='b2' ng-click="change.lineWidth(5)"></p>
+					<p id='b3' ng-click="change.lineWidth(10)"></p>
+				</div>
+				<div id="color">
+					<h5>color: </h5>
+					<p id="g" ng-click="change.color('#5EB953')"></p>
+					<p id="b" ng-click="change.color('#04A7CA')"></p>
+					<p id="blk" ng-click="change.color('#515146')"></p>
+					<p id="r" ng-click="change.color('#C74929')"></p>
+				</div>
+				<div id="eraser">
+					<button ng-click = "change.color('#fff');change.lineWidth(20)">eraser</button>
+				</div>
+			</div>
+			<div id="col2">
+				<a href="#">Email</a>
+				<a href="#">Download</a>
+				<a href="#">New</a>
+			</div>
+		</div>
+		<div id="canvas">
+			<canvas id="myCanvas" width='1000' height='700'></canvas>
+		</div>
+	</div>
+	<div id="rightbar">
+		<div id ="current_users">
+			<h3>Contributors</h3>
+			<div class= "status" ng-repeat="name in names">
+				<p class="stat_color" style="background-color:{{name.color}}"></p>
+				<button class="remove_button" ng-click ="removeName(name._id)">remove</button>
+				<p class= "stat_name">{{name.name}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+
