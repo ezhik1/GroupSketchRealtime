@@ -11,8 +11,6 @@ myApp.controller("NameController", function ($scope, $location, $rootScope, Name
 	//socket updates name list for users entering room	
 	socket.on('welcome_user', function (data){
 		
-		//console.log('welcome, ' + data.name);
-
 		$scope.names.push(data);
 
 		colorPattern(); //returns color by index of user in the room
