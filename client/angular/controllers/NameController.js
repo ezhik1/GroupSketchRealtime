@@ -2,8 +2,6 @@ myApp.controller("NameController", function ($scope, $location, $rootScope, Name
 
 	var socket = io();
 
-
-
 	//Name list populates on refresh
 	$scope.names = NameFactory.getNames(function(output){
 		$scope.names = output;
